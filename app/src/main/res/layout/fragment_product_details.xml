@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Color -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d1ecff" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"
+        android:contentDescription="Background" />
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header with Back Button -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#E6FFFFFF"
+                android:elevation="4dp"
+                android:padding="8dp">
+
+                <!-- Back Button -->
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/circle_blue_background"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="Back"
+                    android:scaleType="center"
+                    android:padding="8dp" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Product Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#220F84" />
+
+            </RelativeLayout>
+
+            <!-- Product Image Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/productDetailsImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/protein_bar"
+                    android:contentDescription="Product Image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Info Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#F8FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Product Name -->
+                    <TextView
+                        android:id="@+id/productDetailsName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#220F84"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Product Category -->
+                    <TextView
+                        android:id="@+id/productDetailsCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📂 Category"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="12dp"
+                        android:padding="8dp"
+                        android:background="@drawable/category_tag_background" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Description Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📝 Description"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#220F84"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Product Description -->
+                    <TextView
+                        android:id="@+id/productDetailsDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product description will appear here..."
+                        android:textSize="16sp"
+                        android:textColor="#444444"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Another Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Price Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💰 Price: "
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#220F84" />
+
+                        <TextView
+                            android:id="@+id/productDetailsPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="99.99 SAR"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#009688" />
+
+                    </LinearLayout>
+
+                    <!-- Add to Cart Button -->
+                    <Button
+                        android:id="@+id/addToCartDetailsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="🛒 Add to Cart"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#220F84"
+                        android:elevation="4dp"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bottom Spacing -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

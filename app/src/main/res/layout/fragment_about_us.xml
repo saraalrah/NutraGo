@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Color -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d1ecff" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"
+        android:contentDescription="Background" />
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <!-- Header Section بدون خلفية -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="20dp"
+                android:elevation="8dp">
+
+                <!-- الشعار -->
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <!-- محتوى الصفحة -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="-30dp">
+
+                <!-- عنوان رئيسي -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌟 Meet the NutraGo Team"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#220F84"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:padding="12dp"
+                    android:elevation="2dp" />
+
+                <!-- وصف التطبيق -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#E6F8F9FF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💪"
+                            android:textSize="40dp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="NutraGo helps fitness enthusiasts discover, compare, and purchase the perfect protein products with ease and convenience."
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- عنوان الفريق -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👥 Our Creative Team"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#220F84"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:padding="8dp"
+                    android:elevation="2dp" />
+
+                <!-- عضو الفريق 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#F0FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:text="👩‍💼"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:background="@drawable/member_circle_background"
+                            android:layout_marginEnd="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sara Alrahma"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#220F84" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🎨 Creative Lead"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Passionate about health technology and creative design innovation"
+                                android:textSize="14sp"
+                                android:textColor="#888888"
+                                android:layout_marginTop="6dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- عضو الفريق 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#F0FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:text="🎨"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:background="@drawable/member_circle_background"
+                            android:layout_marginEnd="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lama Alqashami"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#220F84" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✨ UI/UX Designer"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Design wizard who transforms ideas into beautiful reality"
+                                android:textSize="14sp"
+                                android:textColor="#888888"
+                                android:layout_marginTop="6dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- عضو الفريق 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#F0FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:text="👩‍💻"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:background="@drawable/member_circle_background"
+                            android:layout_marginEnd="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Noura Alshaigi"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#220F84" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👑 Code Queen"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Programming queen who makes everything run smoothly"
+                                android:textSize="14sp"
+                                android:textColor="#888888"
+                                android:layout_marginTop="6dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- عضو الفريق 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#F0FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:text="🔒"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:background="@drawable/member_circle_background"
+                            android:layout_marginEnd="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jady Alnasser"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#220F84" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🛡️ Security Expert"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Security and performance expert who protects our application"
+                                android:textSize="14sp"
+                                android:textColor="#888888"
+                                android:layout_marginTop="6dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- عضو الفريق 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp"
+                    app:cardBackgroundColor="#F0FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:text="⚙️"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:background="@drawable/member_circle_background"
+                            android:layout_marginEnd="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yara Alhowaiti"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#220F84" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🧠 Backend Engineer"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Backend brain who intelligently connects everything together"
+                                android:textSize="14sp"
+                                android:textColor="#888888"
+                                android:layout_marginTop="6dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- رسالة ختامية -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#E6E8F5E8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💚"
+                            android:textSize="40sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="NutraGo was developed with love and passion by a team of students enthusiastic about technology and health!"
+                            android:textSize="16sp"
+                            android:textColor="#2E7D32"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- مساحة فارغة لتجنب إخفاء المحتوى خلف شريط التنقل السفلي -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

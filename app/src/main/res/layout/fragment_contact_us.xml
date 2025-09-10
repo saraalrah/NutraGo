@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Color -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d1ecff" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"
+        android:contentDescription="Background" />
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Logo صغير -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="60dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <!-- العنوان مع خلفية شفافة -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📬 Contact Us"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#220F84"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:elevation="2dp" />
+
+            <!-- حقل الاسم مع خلفية شفافة -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="👤 Your Name"
+                android:background="@drawable/edittext_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"
+                android:inputType="textPersonName" />
+
+            <!-- حقل البريد الإلكتروني مع خلفية شفافة -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="📧 Your Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp" />
+
+            <!-- حقل الرسالة مع خلفية شفافة -->
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="💬 Your Message"
+                android:gravity="top|start"
+                android:background="@drawable/edittext_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:maxLines="6" />
+
+            <!-- زر الإرسال -->
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="📤 Send Message"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:backgroundTint="#220F84"
+                android:textColor="#FFFFFF"
+                android:elevation="6dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- معلومات التواصل الأخرى مع خلفية شفافة -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#F0FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📞 Other Ways to Reach Us"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#220F84"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📧 Email: nutrago@example.com"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="8dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📱 Phone: +966 12 345 6789"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="8dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Location: Riyadh, Saudi Arabia"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- مساحة فارغة للـ bottom navigation -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

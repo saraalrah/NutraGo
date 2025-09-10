@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Color -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d1ecff" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:alpha="0.3"
+        android:contentDescription="Background" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Welcome Button -->
+        <Button
+            android:id="@+id/playWelcomeAudioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="6dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="12dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="12dp"
+            android:text="Welcome"
+            android:textColor="#ffffff" />
+
+        <!-- App Description -->
+
+        <!-- Large Logo Below Text -->
+
+        <TextView
+            android:id="@+id/homeAppDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/logo"
+            android:lineSpacingExtra="6dp"
+            android:padding="16dp"
+            android:text="NutraGo is a sleek and simple app designed to help fitness lovers discover, compare, and purchase protein products easily. Built with love by students passionate about tech and health!"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/homeLargeLogoImage"
+            android:layout_width="800dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="NutraGo Logo"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+</FrameLayout>
